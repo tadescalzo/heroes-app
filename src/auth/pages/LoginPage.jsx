@@ -14,6 +14,7 @@ export const LoginPage = () => {
     <hr />
     <button className="btn btn-primary"
     onClick={onLogin}>
+      Login
     </button>
     </div>
   )
