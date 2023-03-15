@@ -7,16 +7,17 @@ export const Navbar = () => {
 
     const navigate = useNavigate()
 
-    const {user} = useContext(AuthContext)
+    const {user, logout, logged} = useContext(AuthContext)
 
     console.log(user)
-
+    
     const onLogout=()=>{
+        logout()
         navigate('/login',{
             replace: true
         })
     }
-
+    console.log(logged)
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             
@@ -58,11 +59,12 @@ export const Navbar = () => {
                     {
                         (user) && (<span className='nav-item nav-link text-primary'>{user.name}</span>)
                     }
-                    <button
-                    className='nav-item nav-link btn'
-                    onClick={onLogout}>
-                        Logout
+                   <button
+                            className='nav-item nav-link btn'
+                            onClick={onLogout}>
+                               {logged ? 'Logout' : 'Login'} 
                     </button>
+                    
                 </ul>
             </div>
         </nav>
