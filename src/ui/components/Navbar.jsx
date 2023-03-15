@@ -8,16 +8,14 @@ export const Navbar = () => {
     const navigate = useNavigate()
 
     const {user, logout, logged} = useContext(AuthContext)
-
-    console.log(user)
     
     const onLogout=()=>{
         logout()
         navigate('/login',{
             replace: true
         })
+        
     }
-    console.log(logged)
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-2">
             

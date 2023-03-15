@@ -1,3 +1,1 @@
-El sistema de login es un usuario local con las credenciales:
-Usuario: Nacho Arkie
-Password: asdasd123
+El sistema de login/logout tiene un usuario ficticio que se guarda en el localStorage, se validan las rutas publicas y privadas mediante el estado del login.
